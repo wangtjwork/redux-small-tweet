@@ -14,7 +14,7 @@ function addTweet(tweet) {
 
 export function handleAddTweet(text, replyingTo) {
   return (dispatch, getState) => {
-    const { authedUser } = getState;
+    const { authedUser } = getState();
     dispatch(showLoading());
 
     return saveTweet({
