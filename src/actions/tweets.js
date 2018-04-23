@@ -21,11 +21,8 @@ export function handleAddTweet(text, replyingTo) {
       text,
       author: authedUser,
       replyingTo
-    }).then((tweet) => {
-      dispatch(addTweet(tweet));
-    }).then(() => {
-      dispatch(hideLoading());
-    })
+    }).then((tweet) => dispatch(addTweet(tweet)))
+    .then(() => dispatch(hideLoading()))
   }
 }
 
